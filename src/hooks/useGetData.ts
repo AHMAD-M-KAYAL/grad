@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import apiClient from "../services/api-client"
 
-const useData = <T>(endPoint: string) => {
+const useGetData = <T>(endPoint: string) => {
     const { data, error, isLoading } = useQuery<T[], Error>({
         queryKey: [endPoint],
         queryFn: () =>
@@ -12,4 +12,4 @@ const useData = <T>(endPoint: string) => {
     return { data, error, isLoading }
 }
 
-export default useData
+export default useGetData

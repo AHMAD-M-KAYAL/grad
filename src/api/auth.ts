@@ -1,4 +1,4 @@
-import { SignInFormData } from "../validation/SignInSchema";
+import { SignInFormData } from "../Schema/SignInSchema";
 import axios from "axios";
 
 export  const mutationSignIn = (manger: SignInFormData) => {

@@ -15,8 +15,8 @@ import TuneIcon from "@mui/icons-material/Tune";
 import CategoriesOfPlaces from "./component/PlacesComponent/Categories";
 
 import Places from "./component/PlacesComponent/Places";
-import Services from "./component/ServicesComponent/Services";
-import CategoriesOfServisec from "./component/ServicesComponent/Categories";
+import Categories from "./component/ServicesComponent/Categories";
+import CategoriesOfServisec from "./component/ServicesComponent/Services";
 import Bookings from "./component/Bookings/Bookings";
 import Vendors from "./component/Users/Vendors";
 import Customers from "./component/Users/Customers";
@@ -28,8 +28,8 @@ import Banners from "./component/Settings/Banners";
 const ROUTES: Record<string, JSX.Element> = {
   "/places/categories": <CategoriesOfPlaces />,
   "/places/places": <Places />,
-  "/services/categories": <CategoriesOfServisec />,
-  "/services/services": <Services />,
+  "/services/categories": <Categories />,
+  "/services/services": <CategoriesOfServisec />,
   "/bookings/bookings": <Bookings />,
   "/users/vendors": <Vendors />,
   "/users/customers": <Customers />,
@@ -195,7 +195,11 @@ export default function DashboardLayoutBasic(props: any) {
       theme={demoTheme}
       window={demoWindow}
     >
-      <DashboardLayout>
+      <DashboardLayout
+        slots={{
+          appTitle: () => <span style={{ fontWeight: 700 }}>My Dashboard</span>, // أي نص أو عنصر تريده بدل الشعار الافتراضي
+        }}
+      >
         <PageContainer>
           {ROUTES[router.pathname] || (
             <Grid container spacing={1}>

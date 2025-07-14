@@ -2,7 +2,7 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import Logo from "./assets/logo.svg";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { SignInFormData, signInSchema } from "./validation/SignInSchema";
+import { SignInFormData, signInSchema } from "./Schema/SignInSchema";
 import { mutationSignIn } from "./api/auth";
 import { useMutation } from "@tanstack/react-query";
 const SignIn = () => {

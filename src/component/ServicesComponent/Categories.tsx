@@ -1,5 +1,5 @@
 const Categories = () => {
-  return <div>CategoriesOfServices</div>;
+  return <div>asd</div>;
 };
 
 export default Categories;
